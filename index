@@ -1,0 +1,556 @@
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mutual Fund Price Charts</title>
+  <!-- Include Chart.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <table id="external-links">
+    <tr>
+      <th>Mutual Fund</th>
+      <th>Exit Load</th>
+    </tr>
+    <tr>
+      <td><a href=https://www.valueresearchonline.com/funds/183/nippon-india-growth-fund> Nippon India Growth-G</a></td>
+      <td>1% before 30 Days</td>
+    </tr>
+    <tr>
+      <td><a href=https://www.valueresearchonline.com/funds/509/tata-large-cap-fund-regular-plan> Tata
+          Large Cap Reg-G</a></td>
+      <td>1% before 365 Days</td>
+    </tr>
+    <tr>
+      <td><a href=https://www.valueresearchonline.com/funds/11463/nippon-india-small-cap-fund> Nippon India Small Cap-G</a></td>
+      <td>1% before 365 Days</td>
+    </tr>
+    <tr>
+      <td><a href=https://www.valueresearchonline.com/funds/2662/sbi-magnum-midcap-fund> SBI Magnum Midcap-G</a></td>
+      <td>1% before 365 Days</td>
+    </tr>
+    <tr>
+    <td><a href=https://www.valueresearchonline.com/funds/40562/bandhan-small-cap-fund-regular-plan>
+        Bandhan Small Cap Reg-G</a></td>
+    <td>1% before 365 Days</td>
+    </tr>
+    <tr>
+    <td><a href=https://www.valueresearchonline.com/funds/66/quant-small-cap-fund> Quant Small Cap-G</a></td>
+    <td>1% before 365 Days</td>
+    </tr>
+    <tr>
+      <td><a href=https://www.valueresearchonline.com/funds/42653/tata-nifty-midcap-150-momentum-50-index-fund-regular-plan> Tata Nifty
+          Midcap 150 Momentum 50 Index Reg-G</a></td>
+      <td>0.25% before 90 Days</td>
+    </tr>
+    <!--
+    <tr>
+      <td><a href=https://www.valueresearchonline.com/funds/37837/axis-growth-opportunities-fund-regular-plan> Axis Growth Opportunities Reg-G</a></td>
+      <td>1% before 365 Days</td>
+    </tr>
+    -->
+    <tr>
+      <td><a href=https://www.valueresearchonline.com/funds/5270/nippon-india-large-cap-fund> Nippon India
+          Large Cap Fund - Growth</a></td>
+      <td>1% before 7 Days</td>
+    </tr>
+     <!--
+    <tr>
+      <td><a href=https://www.valueresearchonline.com/funds/954/quant-multi-asset-fund> Quant Multi Asset
+          Fund - Growth</a></td>
+      <td>1% before 15 Days</td>
+    </tr>
+    <tr>
+      <td><a href=https://www.valueresearchonline.com/funds/8216/quant-focused-fund> Quant Focused Fund -
+          Growth</a></td>
+      <td>1% before 15 Days</td>
+    </tr>
+   
+    <tr>
+      <td><a href=https://www.valueresearchonline.com/funds/40530/iti-small-cap-fund-regular-plan> ITI Small
+          Cap Fund - Regular Plan - Growth</a></td>
+      <td>1% before 365 Days</td>
+    </tr>
+    <tr>
+      <td><a href=https://www.valueresearchonline.com/funds/43118/iti-flexi-cap-fund-regular-plan/ ITI Flexi
+          Cap Fund- Regular Plan- Growth</a></td>
+      <td>1% before 365 Days</td>
+    </tr>
+    -->
+    <tr>
+      <td><a href="https://www.valueresearchonline.com/funds/36692/icici-prudential-bharat-22-fof/"> ICICI Prudential BHARAT 22 FOF - Cumulative Option </a></td>
+      <td> Nil</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.valueresearchonline.com/funds/34693/dsp-nifty-50-equal-weight-index-fund-regular-plan/"> DSP Nifty 50 Equal Weight Index Fund - Regular Plan </a></td>
+      <td> Nil</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.valueresearchonline.com/funds/42040/motilal-oswal-nifty-200-momentum-30-index-fund-regular-plan/"> Motilal Oswal Nifty 200 Momentum 30 Index Fund - Regular Plan </a></td>
+      <td>1% before 15 Days</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.valueresearchonline.com/funds/42379/icici-prudential-nifty-200-momentum-30-index-fund/"> ICICI Prudential Nifty 200 Momentum 30 Index Fund - Regular Plan </a></td>
+      <td>Nil</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.valueresearchonline.com/funds/43494/uti-nifty-500-value-50-index-fund-regular-plan/"> UTI Nifty 500 Value 50 Index Fund - Regular Plan </a></td>
+      <td> Nil</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.valueresearchonline.com/funds/44396/motilal-oswal-nifty-india-defence-index-fund-regular-plan/"> Motilal Oswal Nifty India Defence Index Fund - Regular Plan </a></td>
+      <td>1% before 15 Days</td>
+    </tr>
+    <tr>
+      <td><a href="">Motilal Oswal Midcap Fund - Direct Plan - Growth</a></td>
+      <td>1% before 365 Days</td>
+    </tr>
+    <tr>
+      <td><a href="">LIC MF Infrastructure Fund - Direct Plan - Growth</a></td>
+      <td>1% before 90 Days</td>
+    </tr>
+    <tr>
+      <td><a href="">Bandhan Small Cap Fund - Direct Plan - Growth</a></td>
+      <td>1% before 365 Days</td>
+    </tr>
+    <tr>
+      <td><a href="">HDFC Pharma and Healthcare Fund - Direct Plan - Growth</a></td>
+      <td>1% before 30 Days</td>
+    </tr>
+    <tr>
+      <td><a href="">Invesco India Focused Fund - Direct Plan Growth</a></td>
+      <td>1% before 365 Days, Nil uptill 10%</td>
+    </tr>
+    <tr>
+      <td><a href="">Motilal Oswal Flexi Cap Fund - Direct Plan - Growth</a></td>
+      <td>1% before 365 Days</td>
+    </tr>
+    <tr>
+      <td><a href="">ICICI Prudential Pharma Healthcare and Diagnostics (P.H.D) Fund - Direct Plan - Growth</a></td>
+      <td>1% before 15 Days</td>
+    </tr>
+    <tr>
+      <td><a href="">Motilal Oswal Large and Midcap Fund - Direct Plan - Growth</a></td>
+      <td>1% before 365 Days</td>
+    </tr>
+    <tr>
+      <td><a href="">UTI Healthcare Fund - Direct Plan - Growth</a></td>
+      <td>1% before 30 Days</td>
+    </tr>
+    <tr>
+      <td><a href="">Bandhan Infrastructure Fund - Direct Plan - Growth</a></td>
+      <td>0.5% before 30 Days</td>
+    </tr>
+    <tr>
+      <td><a href="">Edelweiss Mid Cap Fund - Direct Plan - Growth</a></td>
+      <td>1% before 90 Days</td>
+    </tr>
+    <tr>
+      <td><a href="">LIC MF Small Cap Fund - Direct Plan - Growth</a></td>
+      <td>1% before 365 Days, Nil uptill 12%</td>
+    </tr>
+    <tr>
+      <td><a href="">HSBC Large & Midcap Fund - Direct Plan - Growth</a></td>
+      <td>1% before 365 Days</td>
+    </tr>
+    <tr>
+      <td><a href="">ITI Small Cap Fund - Direct Plan - Growth</a></td>
+      <td>1% before 365 Days</td>
+    </tr>
+    <tr>
+      <td><a href="">LIC MF Dividend Yield Fund - Direct Plan - Growth</a></td>
+      <td>1% before 365 Days, Nil uptill 12%</td>
+    </tr>
+    <tr>
+      <td><a href="">Axis Multicap Fund - Direct Plan - Growth</a></td>
+      <td>1% before 365 Days, Nil uptill 12%</td>
+    </tr>
+    <tr>
+      <td><a href="">Baroda BNP Paribas Multi Cap Fund - Direct Plan - Growth</a></td>
+      <td>1% before 365 Days</td>
+    </tr>
+    <tr>
+      <td><a href="">LIC MF Infrastructure - G</a></td>
+      <td>1% before 365 Days</td>
+    </tr>
+   
+
+  </table>
+
+  <style>
+    #external-links {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 1100px;
+      padding: 10px;
+      margin: 20px auto;
+    }
+
+    #external-links td,
+    #external-links th {
+      border: 1px solid #ddd;
+      padding: 20px;
+    }
+
+    #external-links tr:nth-child(odd) {
+      background-color: #f2f2f2;
+    }
+
+    #external-links tr:hover {
+      background-color: #ddd;
+    }
+
+    #external-links th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #4BC0C0;
+      color: white;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .chart-container {
+      width: 1200px;
+      margin: 20px auto;
+    }
+
+    .calculation-container {
+      margin-top: 20px;
+    }
+
+    .collapsible {
+      background-color: #777;
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .active, .collapsible:hover {
+      background-color: #555;
+    }
+
+    .collapsable-content {
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+    }
+  </style>
+<script defer data-domain="mutualfundprices.tiiny.site" src="https://analytics.tiiny.site/js/plausible.js"></script><script type="text/javascript" src="https://tiiny.host/ad-script.js"></script></head>
+
+<body>
+  <div id="charts">
+
+  <script>
+    // Function to fetch data from API
+    // API to get mutual funds data: https://www.mfapi.in/	
+    async function fetchData(mfId) {
+      const response = await fetch(`https://api.mfapi.in/mf/${mfId}`);
+      const data = await response.json();
+
+      // Sort the data list based on the "date" field in ascending order
+      //data.data.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+      return data;
+    }
+
+    // Function to create and render a chart
+    function createChart(containerId, mfData, schemeName) {
+      const canvas = document.createElement('canvas');
+      canvas.setAttribute('id', containerId + '-chart');
+      document.getElementById(containerId).appendChild(canvas);
+
+      const ctx = canvas.getContext('2d');
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: mfData.slice(0, 60).reverse().map(entry => entry.date),
+          //labels: mfData.reverse().map(entry => entry.date),
+          datasets: [{
+            label: 'NAV',
+            data: mfData.slice(0, 60).reverse().map(entry => parseFloat(entry.nav)),
+            //data: mfData.reverse().map(entry => parseFloat(entry.nav)),
+            borderColor: 'rgb(75, 192, 192)',
+            tension: 0.1
+          }]
+        },
+        options: {
+          responsive: true,
+          layout: {
+            padding: {
+              left: 50, // Adjust as needed
+              right: 50 // Adjust as needed
+            }
+          },
+          scales: {
+            y: {
+              // type: 'logarithmic',
+              ticks: {
+                callback: function (value, index, values) {
+                  return value.toLocaleString('en-US', { style: 'currency', currency: 'INR' });
+                }
+              }
+            }
+          }
+        }
+      });
+
+      // Display mutual fund name above the chart
+      const title = document.createElement('h3');
+      title.textContent = schemeName;
+      document.getElementById(containerId).insertBefore(title, canvas);
+
+      // Highest NAV Calculation
+      const highestNavText = document.createElement('p');
+      highestNAV = 0.000;
+      mfData.forEach(entry => {
+        const nav = parseFloat(entry.nav);
+        if (nav > highestNAV) {
+          highestNAV = nav;
+          highestNAVDate = entry.date;
+        }
+      });
+
+      // NAV deviation
+      latestNAV = mfData[0].nav
+      navDeviation = (((latestNAV - highestNAV)/highestNAV)*100).toFixed(3)
+
+      // Add latest NAV text
+      const latestNavText = document.createElement('p');
+      latestNavText.textContent = 'Latest NAV: ' + latestNAV + ' (On ' + mfData[0].date + ') | ' + navDeviation +' away from Highest NAV';
+      document.getElementById(containerId).appendChild(latestNavText);
+
+      //Different Appreciation percentages  calculations
+      const dayChange = (((mfData[0].nav-mfData[1].nav)/mfData[1].nav)*100).toFixed(3)
+      const weekChange = (((mfData[0].nav-mfData[5].nav)/mfData[1].nav)*100).toFixed(3)
+      const monthChange = (((mfData[0].nav-mfData[21].nav)/mfData[1].nav)*100).toFixed(3)
+      const thremonthhChange = (((mfData[0].nav-mfData[63].nav)/mfData[1].nav)*100).toFixed(3)
+      const sixmonthChange = (((mfData[0].nav-mfData[126].nav)/mfData[1].nav)*100).toFixed(3)
+      const yearChange = (((mfData[0].nav-mfData[252].nav)/mfData[1].nav)*100).toFixed(3)
+      //const ytdChange = 0.00
+
+      //Add percentage change text on page
+      const percentageChangeText = document.createElement('p');
+      percentageChangeText.textContent = 'Percentage Changes:  ' +' 1D '+dayChange+' | '+' 1W '+weekChange+' | '+' 1M '+monthChange+' | '+' 3M '+thremonthhChange+' | '+' 6M '+sixmonthChange+' | '+' 1Y '+yearChange;
+      document.getElementById(containerId).appendChild(percentageChangeText);     
+
+      // Add Highest NAV text on page
+      highestNavText.textContent = 'Highest NAV: ' + highestNAV + ' (On ' + highestNAVDate + ')';
+      document.getElementById(containerId).appendChild(highestNavText);
+
+      // Add Calculate Redemption button
+      const button_1 = document.createElement('button');
+      button_1.textContent = 'Calculate Redemption';
+      button_1.addEventListener('click', () => {
+        showRedemptionCalculation(containerId, mfData);
+      });
+      document.getElementById(containerId).appendChild(button_1);
+
+    }
+
+
+    // Function to display redemption calculation table
+    function showRedemptionCalculation(containerId, mfData) {
+      const container = document.getElementById(containerId);
+      const tableContainer = document.createElement('div');
+      tableContainer.classList.add('calculation-container');
+      const table = document.createElement('table');
+      table.innerHTML = `
+    <tr>
+      <th>Column Name</th>
+      <th>Values</th>
+    </tr>
+  `;
+
+      // Get the user input values
+      const firstBuyDate = prompt('Enter the date of first buy (DD-MM-YYYY):');
+      console.log("First Date entered by user before alteration: " + firstBuyDate)
+
+      const totalPrice = parseFloat(prompt('Enter the total price:'));
+      const redemptionDate = prompt('Enter the redemption date (DD-MM-YYYY):');
+      console.log("Redemption Date entered by user : " + redemptionDate)
+
+      if (!firstBuyDate || !redemptionDate) {
+        alert('Invalid date format. Please enter date in DD-MM-YYYY format.');
+        return; // Exit function if date format is invalid
+      }
+
+      // Find the NAV on first buy date and redemption date
+      const navOnFirstBuyDate = mfData.find(entry => entry.date === firstBuyDate)?.nav;
+          const navOnRedemptionDate = mfData.find(entry => entry.date === redemptionDate)?.nav;
+    
+          const unitsBought = (totalPrice / navOnFirstBuyDate).toFixed(3);                                      // Calculate units bought
+          const marketValue = (unitsBought * navOnRedemptionDate).toFixed(3);                                   // Calculate market value
+          const grossProfit = marketValue - totalPrice;                                                         // Calculate gross profit
+          const grossProfitPercentage = ((marketValue - totalPrice) / totalPrice) * 100;                        // Calculate gross profit percentage
+          const exitLoad = marketValue / 100;                                                                   // Calculate exit load @ 1%
+          const netProfitBeforeTax = grossProfit - exitLoad;                                                    // Calculate net profit before tax
+          const takeBack = totalPrice + netProfitBeforeTax;                                                     // Calculate take back (including capital invested + net profit)
+          const cessTax = (takeBack * 0.001 / 100).toFixed(2);                                                  // Calculate cess tax @0.001%
+          const netRedemption = takeBack - cessTax;                                                             // Calculate net redemption
+          const tax = netProfitBeforeTax * 0.15;                                                                // Calculate tax @ 15%
+          const netTakeHome = netRedemption - tax;                                                              // Calculate net take home
+          const netProfitAfterTax = netTakeHome - totalPrice;                                                   // Calculate net profit after tax
+          const netProfitAfterTaxPercentage = ((netProfitAfterTax - totalPrice) / totalPrice) * 100             // Calculate net profit percentage after tax               
+    
+          console.log("All Calculations done, printing table.")
+          // Populate the table with the calculated values
+          table.innerHTML += `
+        <tr>
+          <td>1st Buy on</td>
+          <td>${firstBuyDate}</td>
+        </tr>
+        <tr>
+          <td>NAV on 1st Buy Date</td>
+          <td>${navOnFirstBuyDate}</td>
+        </tr>
+        <tr>
+          <td>Units Bought</td>
+          <td>${unitsBought}</td>
+        </tr>
+        <tr>
+          <td>Total Price</td>
+          <td>${totalPrice.toLocaleString('en-IN', { style: 'currency', currency: 'INR' })}</td>
+        </tr>
+        <tr>
+          <td>Redemption on</td>
+          <td>${redemptionDate}</td>
+        </tr>
+        <tr>
+          <td>NAV on Redemption Date</td>
+          <td>${navOnRedemptionDate}</td>
+        </tr>
+        <tr>
+          <td>Market Value</td>
+          <td>${marketValue.toLocaleString('en-IN', { style: 'currency', currency: 'INR' })}</td>
+        </tr>
+        <tr style="font-weight:bold">
+          <td>Gross Profit</td>
+          <td>${grossProfit.toLocaleString('en-IN', { style: 'currency', currency: 'INR' })}</td>
+        </tr>
+        <tr style="font-weight:bold">
+          <td>Gross Profit %</td>
+          <td>${grossProfitPercentage.toLocaleString('en-IN', { style: 'currency', currency: 'INR' })}</td>
+        </tr>
+        <tr>
+          <td>Exit Load @ 1%</td>
+          <td>${exitLoad.toLocaleString('en-IN', { style: 'currency', currency: 'INR' })}</td>
+        </tr>
+        <tr>
+          <td>Net Profit Before Tax</td>
+          <td>${netProfitBeforeTax.toLocaleString('en-IN', { style: 'currency', currency: 'INR' })}</td>
+        </tr>
+        <tr>
+          <td>Take Back (Including Capital Invested + Net Profit)</td>
+          <td>${takeBack.toLocaleString('en-IN', { style: 'currency', currency: 'INR' })}</td>
+        </tr>
+        <tr>
+          <td>Cess Tax @0.001%</td>
+          <td>${cessTax.toLocaleString('en-IN', { style: 'currency', currency: 'INR' })}</td>
+        </tr>
+        <tr>
+          <td>NET REDEMPTION</td>
+          <td>${netRedemption.toLocaleString('en-IN', { style: 'currency', currency: 'INR' })}</td>
+        </tr>
+        <tr>
+          <td>Tax @ 15%</td>
+          <td>${tax.toLocaleString('en-IN', { style: 'currency', currency: 'INR' })}</td>
+        </tr>
+        <tr>
+          <td>Net Take Home</td>
+          <td>${netTakeHome.toLocaleString('en-IN', { style: 'currency', currency: 'INR' })}</td>
+        </tr>
+        <tr style="font-weight:bold">
+          <td>Net Profit After Tax</td>
+          <td>${netProfitAfterTax.toLocaleString('en-IN', { style: 'currency', currency: 'INR' })}</td>
+        </tr>
+        <tr style="font-weight:bold">
+          <td>Net Profit % After Tax</td>
+          <td>${netProfitAfterTaxPercentage.toLocaleString('en-IN', { style: 'currency', currency: 'INR' })}</td>
+        </tr>
+  `;
+
+      tableContainer.appendChild(table);
+      container.appendChild(tableContainer);
+    }
+    /*
+      function getHighestNAV(containerId, mfData){
+        // Iterate through the dataList to find the highest NAV
+        highestNAV = 0.000;
+        mfData.forEach(entry => {
+          const nav = parseFloat(entry.nav);
+          if (nav > highestNAV) {
+            highestNAV = nav;
+          }
+        });
+        console.log('Highest NAV:', highestNAV);
+      }
+    */
+
+
+    // Function to render charts for all mutual funds
+    async function renderCharts() {
+      const mutualFunds = [
+                           '100475', 
+                           '113177',
+                           '102941',
+                           '147944',
+                           '100177',
+                           '150741',
+                           '106235',
+                           '143904',
+                           '141875',
+                           '149799',
+                           '150454',
+                           '151738',
+                           '120351',
+                           '127042',
+                           '147946',
+                           '152082',
+                           '148481',
+                           '129046',
+                           '143874',
+                           '147704',
+                           '120782',
+                           '118469',
+                           '140228',
+                           '152004',
+                           '147919',
+                           '152022',
+                           '149383',
+                           '119354',
+                           '107763',
+                           '152712'
+                          ]
+      
+      for (const mfId of mutualFunds) {
+        const mfData = await fetchData(mfId);
+        const containerId = 'chart-' + mfId;
+        const chartsDiv = document.getElementById('charts');
+        const chartContainer = document.createElement('div');
+        chartContainer.setAttribute('class', 'chart-container');
+        chartContainer.setAttribute('id', containerId);
+        chartsDiv.appendChild(chartContainer);
+        const schemeName = mfData.meta.scheme_name;
+        createChart(containerId, mfData.data, schemeName);
+      }
+    }
+
+    // Call the function to render charts
+    renderCharts();
+  </script>
+
+  </div>
+   
+  
+</body>
+
+</html>
